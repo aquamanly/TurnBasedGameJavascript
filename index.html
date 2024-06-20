@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+   
+    <title>Turn-Based RPG Combat</title>
+    <style>
+        .menu { display: none; }
+        .zone { margin-top: 10px; }
+    </style>
+    
+</head>
+<body>
+    <div id="combat-log"></div>
+    <div id="initiative-input">
+        <h3>Enter Initiative (1-20)</h3>
+        <div id="initiative-list"></div>
+        <button onclick="startCombat()">Start Combat</button>
+    </div>
+    <div id="player-menu" class="menu">
+        <button onclick="attack('melee')">Attack (Melee)</button>
+        <button onclick="attack('ranged')">Attack (Ranged)</button>
+        <button onclick="attack('magic')">Attack (Magic)</button>
+        <button onclick="showInventory()">Inventory</button>
+    </div>
+    <div id="inventory" class="menu"></div>
+    <div class="zone">
+        <label for="zones">Select Zone:</label>
+        <select id="zones">
+            <option value="close">Close</option>
+            <option value="near">Near</option>
+            <option value="far">Far</option>
+        </select>
+    </div>
+
+    <div id="Inventory"></div>
+    <script src="script.js"></script>
+</body>
+</html>
